@@ -191,9 +191,13 @@ def add(a, b):
 5433:M 14 May 12:15:28.348 # Redis is now ready to exit, bye bye...
 ```
 
-之后新建终端，执行命令 `python manage.py runserver` ，之后再新建一个终端，执行命令 `celery -A demo worker -l info` (注： 此处的demo为Django项目名称)，没有看到报错的话，就证明运行成功了。
+错误：
+1. /etc/init.d/redis-server stop
+2. 根据WARNING提示修改
 
-再次访问网址
+之后新建终端，demo路径下执行命令 `python manage.py runserver` ，之后再新建一个终端，demo路径下执行命令 `celery -A demo worker -l info` (注： 此处的demo为Django项目名称)，没有看到报错的话，就证明运行成功了。
+
+再次访问网址localhost:8000
 
 ![jianshu4](./pic/jianshu4.png)
 
